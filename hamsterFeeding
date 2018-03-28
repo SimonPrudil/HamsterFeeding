@@ -1,0 +1,40 @@
+# HamsterFeeding
+
+int food = 100; //pridat generovani jidla + grafiku a aby krecci jezdili po poli
+
+class Krecek {
+  int weigth = 10;
+  int age = 0;
+  int energy = 10;
+  
+  void jez() {
+    this.food -= 1;
+    this.weight += 1;
+  }
+  
+  void trav() {
+    this.weight -= 1;
+    this.energy += 1;
+  }
+  
+  void utikej_a_hubni() {
+    this.weight -= 2;
+    this.energy -= 1;
+  }
+  
+}
+
+Krecek krecku;
+
+void setup() {
+  krecku = new Krecek();
+}
+
+void draw() {
+  while (krecku.age <= 100) { //asi by bylo lepsi zjistit jak misto tyhohle cyklu ten objekt primo smazat
+    krecku.jez(); //krecek is eating
+    krecku.trav(); //krecek metabolizes
+    if (weight > 30) krecku.utikej_a_hubni(); //krecek sports
+  }
+  if (krecku.age >= 100) println("Final energy of krecek/*"+number of krecek+"*/ was "+ krecku.age +");
+}
