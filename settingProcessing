@@ -1,0 +1,6 @@
+follow instructions https://github.com/processing/processing/wiki/Build-Instructions
+
+install the last version of Java
+download Ant: https://ant.apache.org/bindownload.cgi
+clone source repository from GitHub
+...
